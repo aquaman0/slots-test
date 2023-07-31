@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Royal Coins 2 | Gold Rush</title>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- MOBILE CSS -->
+    <link rel="stylesheet" href="css/media-queries.css">
+
+</head>
+<body id="royal-coins">
+<header class="games-header">
+    <button class="round-btn back-btn" type="button" onclick="window.location.href='/lobby'"><img alt="arrow-back" class="arrow-back" src="images/arrow_back.svg" width="30" height="30"></button>
+    <div class="games-score-container">
+        <div class="stars-preview">
+            <div class="stars-layout">
+                <img alt="icon-star" class="icon-star-small" src="images/star.svg">
+                <div class="quantity stars-q"><span id="stars-q">0</span>/<span id="stars-max">9000</span></div>
+            </div>
+        </div>
+        <div class="points-preview">
+            <div class="stars-layout">
+                <img alt="icon-coin" class="icon-coin-front" src="images/coin.svg">
+                <img alt="icon-coin" class="icon-coin-back" src="images/coin.svg">
+                <div class="quantity coins-q" id="coins-q">100000</div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="game-royal-coins">
+    <div class="games-container">
+        <div class="slot-machine">
+            <div class="reel" id="reel1"></div>
+            <div class="reel" id="reel2"></div>
+            <div class="reel" id="reel3"></div>
+            <div class="reel" id="reel4"></div>
+            <div class="reel" id="reel5"></div>
+            <div class="reel" id="reel6"></div>
+            <div class="reel" id="reel7"></div>
+            <div class="reel" id="reel8"></div>
+            <div class="reel" id="reel9"></div>
+        </div>
+    </div>
+</section>
+
+<footer class="games-footer">
+    <div class="footer-container">
+        <div class="bet-container">
+            <button id="decreaseBet" onclick="decreaseBet()" class="round-btn plus-minus-btn">-</button>
+            <div id="bet"><p id="bet-q">1000</p></div>
+            <button id="increaseBet" onclick="increaseBet()" class="round-btn plus-minus-btn">+</button>
+        </div>
+        <div id="win-msg"><div id="win"><p class="win-txt">WIN</p><p id="win-q">55050</p></div></div>
+        <div class="auto-spin-btns">
+            <button onclick="autoSpin()" id="autoButton" class="violet-btn" value="AUTO"></button>
+            <button class="violet-btn" value="SPIN" onclick="spin()" id="spinButton"></button>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/slots.js"></script>
+
+</body>
+</html>
